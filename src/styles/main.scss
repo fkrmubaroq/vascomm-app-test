@@ -1,7 +1,61 @@
+@import "./fonts/playFairDisplay.scss";
+@import "./fonts/poppins.scss";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html,body{
+html,
+body {
   @apply m-0 p-0;
+}
+
+.banner-home-page {
+  .swiper-pagination {
+    bottom: 0px !important;
+    text-align: left;
+    margin-left: 20px;
+  }
+  .swiper-pagination-bullets {
+    left: 0.5% !important;
+    top: unset !important;
+    bottom: 5px !important;
+    transform: translateX(0%) !important;
+    width: auto !important;
+  }
+  .swiper-pagination-bullet {
+    @apply w-[9px] h-[9px] bg-gray-100 opacity-100;
+    &.swiper-pagination-bullet-active {
+      @apply bg-[#A29B91];
+    }
+  }
+
+  .swiper-button-prev {
+    top: unset;
+    @apply text-[#A19B91]  absolute left-0 -bottom-1.5;
+    &::after {
+      @apply text-xl font-semibold;
+    }
+  }
+  .swiper-button-next {
+    top: unset;
+    @apply text-[#A19B91]  absolute left-[110px] -bottom-1.5;
+    &::after {
+      @apply text-xl font-semibold;
+    }
+  }
+}
+
+.swiper-products{
+   .swiper-button-prev {
+    @apply text-[#A19B91];
+    &::after {
+      @apply text-3xl font-light;
+    }
+  }
+  .swiper-button-next {
+    @apply text-[#A19B91];
+    &::after {
+      @apply text-3xl font-light;
+    }
+  }
 }

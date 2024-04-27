@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        playFair: ["Playfair Display", "sans-serif"],
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -15,6 +19,9 @@ const config: Config = {
       },
       colors: {
         primary: "#41A0E4",
+      },
+      boxShadow: {
+        "product-card": "0px 6px 10px 0px #0000001A",
       },
     },
   },

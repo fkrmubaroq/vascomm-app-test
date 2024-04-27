@@ -1,7 +1,7 @@
 import { Button } from "../button";
 import { Input } from "../form/Input";
-import LogoIcon, { LogoText } from "../icons/Logo";
 import MagniferIcon from "../icons/Magnifer";
+import Logo from "../title/Logo";
 
 export default function Header() {
   return (
@@ -23,13 +23,6 @@ export default function Header() {
       </div>
     </header>
   );
-}
-
-function Logo() {
-  return <div className="flex gap-x-2 items-center w-[168px]">
-    <LogoIcon />
-    <LogoText />
-  </div>
 }
 
 function FormSearchInput() {
