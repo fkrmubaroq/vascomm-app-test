@@ -1,0 +1,22 @@
+.layout{
+  display: grid;
+  grid-template-areas: "header header"
+                       "sidebar content";
+  grid-template-rows: 70px 1fr;
+  grid-template-columns: 245px 1fr;
+  @apply min-h-screen;
+  #header{
+    grid-area: header;
+    @apply bg-white;
+  }
+
+  #sidebar{
+    grid-area: sidebar;
+    @apply bg-white;
+  }
+
+  #content{
+    grid-area: content;
+    @apply bg-[#F8F8F8] pl-8 pr-6 py-[30px];
+  }
+}

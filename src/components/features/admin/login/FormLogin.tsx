@@ -2,18 +2,12 @@ import { Button } from "@/components/button";
 import ContainerInput from "@/components/form/ContainerInput";
 import { Input } from "@/components/form/Input";
 import { Label } from "@/components/label";
-import useMutation from "@/hooks/mutation";
 import { TFormLogin } from "@/types/form";
 import { useState } from "react";
 
 export default function FormLogin() {
-  const [form, setForm] = useState<{ email_telp: string, password: string }>({ email_telp: "", password: "" })
-  const { mutate } = useMutation({
-    mutateFn: (payload: TFormLogin) => {
-      return
-    }
+  const [form, setForm] = useState<TFormLogin>({ email_telp: "", password: "" })
 
-  })
   return (
     <form className="flex flex-col gap-y-4">
       <ContainerInput>

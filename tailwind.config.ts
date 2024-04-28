@@ -11,6 +11,7 @@ const config: Config = {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
         playFair: ["Playfair Display", "sans-serif"],
+        rubik: ["Rubik", "sans-serif"],
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
