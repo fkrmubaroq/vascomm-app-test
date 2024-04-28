@@ -6,7 +6,7 @@ import Footer from "@/components/layouts/Footer";
 import { Playfair_Display, Poppins } from "next/font/google";
 
 const playFairDisplay = Playfair_Display({ subsets: ["latin"] });
-const poppins = Poppins({ weight:"600", subsets: ["latin"] });
+const poppins = Poppins({ weight: "600", subsets: ["latin"] });
 export default function Home() {
   return (
     <>
