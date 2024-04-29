@@ -2,11 +2,15 @@ import { Button } from "@/components/button";
 import ContainerInput from "@/components/form/ContainerInput";
 import { Input } from "@/components/form/Input";
 import { Label } from "@/components/label";
-import { TFormLogin } from "@/types/form";
+import { TFormRegister } from "@/types/form";
 import { useState } from "react";
 
-export default function FormRegister({ onRegister }: { onRegister: (form: TFormLogin) => void;  }) {
-  const [form, setForm] = useState<TFormLogin>({
+export default function FormRegister({
+  onRegister,
+}: {
+  onRegister: (form: TFormRegister) => void;
+}) {
+  const [form, setForm] = useState<TFormRegister>({
     email: "",
     telp: "",
     full_name: "",
@@ -21,7 +25,7 @@ export default function FormRegister({ onRegister }: { onRegister: (form: TFormL
     onRegister(form);
   };
   return (
-    <form className="flex flex-col gap-y-4" onSubmit={onSubmit}>
+    <form className="flex flex-col gap-y-4" onSubmit={onSubmit} method="POST">
       <ContainerInput>
         <Label>Nama</Label>
         <Input

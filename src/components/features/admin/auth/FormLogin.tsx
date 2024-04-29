@@ -5,18 +5,30 @@ import { Label } from "@/components/label";
 import { TFormLogin } from "@/types/form";
 import { useState } from "react";
 
-export default function FormLogin() {
-  const [form, setForm] = useState<TFormLogin>({ email_telp: "", password: "" })
+export default function FormLogin({
+  onLogin,
+}: {
+  onLogin: (form: TFormLogin) => void;
+}) {
+  const [form, setForm] = useState<TFormLogin>({ email: "", password: "" });
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
+  const onSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    onLogin(form);
+  };
   return (
-    <form className="flex flex-col gap-y-4">
+    <form className="flex flex-col gap-y-4" onSubmit={onSubmit} method="POST">
       <ContainerInput>
         <Label>Email / Nomor Telpon</Label>
         <Input
-          name="email_telp"
-          value={form.email_telp}
+          name="email"
+          value={form.email}
           className="rounded-none"
           placeholder="Contoh: admin@gmail.com"
+          onChange={onChange}
         />
       </ContainerInput>
       <ContainerInput className="mb-8">
@@ -26,11 +38,14 @@ export default function FormLogin() {
           name="password"
           value={form.password}
           className="rounded-none"
-          placeholder="Masukkan passward"
+          placeholder="Masukkan password"
+          onChange={onChange}
         />
       </ContainerInput>
 
-      <Button type="submit" className="w-full rounded-none">MASUK</Button>
+      <Button type="submit" className="w-full rounded-none">
+        MASUK
+      </Button>
     </form>
   );
 }

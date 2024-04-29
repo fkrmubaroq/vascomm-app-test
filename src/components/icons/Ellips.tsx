@@ -1,6 +1,6 @@
 export default function EllipseIcon() {
   return <svg
-      width="496"
+      width="550"
       height="86"
       viewBox="0 0 496 86"
       fill="none"

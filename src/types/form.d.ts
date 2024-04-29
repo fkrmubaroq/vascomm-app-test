@@ -1,5 +1,9 @@
 export type TFormLogin = {
   email: string;
+  password: string;
+};
+export type TFormRegister = {
+  email: string;
   telp: string;
   full_name: string;
 };

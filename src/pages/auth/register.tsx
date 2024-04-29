@@ -1,18 +1,22 @@
 import { createUser } from "@/api-collection/user";
 import FormRegister from "@/components/features/admin/auth/FormRegister";
 import useMutation from "@/hooks/mutation";
-import { TFormLogin } from "@/types/form";
+import { TFormRegister } from "@/types/form";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 export default function Register() {
 
-  const { mutate:onRegister } = useMutation<TFormLogin>({
-    mutateFn: async (payload: TFormLogin) => {
+  const router = useRouter();
+  const { mutate:onRegister } = useMutation<TFormRegister>({
+    mutateFn: async (payload: TFormRegister) => {
       const response = await createUser(payload);
       return response.data || [];
     },
     onSuccess:(response) => {
       alert(response.message);
+      // TODO: implement oAuth2
+      router.push("/admin/dashboard")
     },
     onError: (message) => {
       alert(message);

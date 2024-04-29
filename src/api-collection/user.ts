@@ -1,3 +1,4 @@
+import { TFormLogin } from "@/types/form";
 import { ResponseApi } from "@/types/global";
 import { AxiosResponse } from "axios";
 import { methodDelete, methodGet, methodPost, methodPut } from ".";
@@ -8,6 +9,9 @@ import {
   TPostUserResponse,
 } from "./user.d";
 
+export function login(payload:TFormLogin) {
+  return methodPost("/login", payload)
+}
 export function getUser(
   params?: TGetUserParams
 ): Promise<AxiosResponse<TGetUserResponse>> {
