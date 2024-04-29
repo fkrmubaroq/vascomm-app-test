@@ -1,0 +1,19 @@
+.table{
+  &.table-stripped{
+    tbody{
+      tr:nth-of-type(odd){
+        @apply bg-white;
+      }
+      tr:nth-of-type(even){
+        @apply bg-[#F8F8F8];
+      }
+    }
+  }
+  &.table-admin{
+    tbody{
+      td{
+        @apply py-2;
+      }
+    }
+  }
+} 

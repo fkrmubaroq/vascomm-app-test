@@ -1,59 +1,22 @@
 "use client"
+import { TDataProduct } from "@/api-collection/product.d";
 import TitleSection from "@/components/title/TitleSection";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import ProductItem from "./ProductItem";
-import { Product } from "./types";
 
-const dataProducts: Product[] = [
-  {
-    image: "/images/products/product-1.png",
-    title: "Euodia",
-    price: "IDR x.xxx.980",
-  },
-  {
-    image: "/images/products/product-2.png",
-    title: "Euodia",
-    price: "IDR x.xxx.980",
-  },
-  {
-    image: "/images/products/product-2.png",
-    title: "Euodia",
-    price: "IDR x.xxx.980",
-  },
-  {
-    image: "/images/products/product-2.png",
-    title: "Euodia",
-    price: "IDR x.xxx.980",
-  },
-  {
-    image: "/images/products/product-2.png",
-    title: "Euodia",
-    price: "IDR x.xxx.980",
-  },
-  {
-    image: "/images/products/product-2.png",
-    title: "Euodia",
-    price: "IDR x.xxx.980",
-  },
-  {
-    image: "/images/products/product-2.png",
-    title: "Euodia",
-    price: "IDR x.xxx.980",
-  },
-];
-export default function NewestProducts() {
+export default function NewestProducts({ data }: { data: TDataProduct[]}) {
   return (
     <section className="flex flex-col gap-y-[33px] mt-[33px]">
       <TitleSection text="Terbaru" />
-      <Products data={dataProducts} />
+      <Products data={data} />
     </section>
   );
 }
 
-function Products({ data }: { data: Product[] }) {
+function Products({ data }: { data: TDataProduct[] }) {
   return (
     <div className="flex gap-x-[23px]">
       <Swiper

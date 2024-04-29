@@ -1,9 +1,11 @@
+import { useRouter } from "next/router";
 import { Button } from "../button";
 import { Input } from "../form/Input";
 import MagniferIcon from "../icons/Magnifer";
 import Logo from "../title/Logo";
 
 export default function Header() {
+  const router = useRouter();
   return (
     <header className=" w-ful border-b border-b-[#E4E4E4]">
       <div className="max-w-[1280px] h-[70px] items-center mx-auto bg-white flex justify-between">
@@ -13,10 +15,14 @@ export default function Header() {
           <Button
             variant="outline-primary"
             className="tracking-[25%] leading-[16.71px] uppercase rounded-none text-sm"
+            onClick={() => router.push("/auth/login")}
           >
             MASUK
           </Button>
-          <Button className="tracking-[25%] leading-[16.71px] uppercase rounded-none text-sm">
+          <Button
+            className="tracking-[25%] leading-[16.71px] uppercase rounded-none text-sm"
+            onClick={() => router.push("/auth/register")}
+          >
             DAFTAR
           </Button>
         </div>

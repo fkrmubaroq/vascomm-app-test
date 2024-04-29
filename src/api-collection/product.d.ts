@@ -15,3 +15,11 @@ export type TDataProduct = {
   created_at: string;
 }
 export type TGetProductResponse = ResponseApi<TDataProduct>
+export type TPostProductResponse = ResponseApi<TDataProduct>
+
+export type TPayloadProduct = {
+  id?: number;
+  product_name: string;
+  image?: File | string;
+  price: number;
+};

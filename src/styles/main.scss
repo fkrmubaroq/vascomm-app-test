@@ -1,5 +1,6 @@
 @import "./fonts/playFairDisplay.scss";
 @import "./fonts/poppins.scss";
+@import "./table.scss";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -59,3 +60,12 @@ body {
     }
   }
 }
+
+.menu-item{
+  &:hover, &.active{
+    svg,path{
+      @apply stroke-white;
+    }
+  }
+}
+
