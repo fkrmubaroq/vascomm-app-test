@@ -1,3 +1,15 @@
+## Screenshoots 
+
+<img src="https://github.com/fkrmubaroq/vascomm-app-test/blob/main/screenshoots/landing-page.png" width="800"/>
+<img src="https://github.com/fkrmubaroq/vascomm-app-test/blob/main/screenshoots/login.png" width="800"/>
+<img src="https://github.com/fkrmubaroq/vascomm-app-test/blob/main/screenshoots/register.png" width="800"/>
+<img src="https://github.com/fkrmubaroq/vascomm-app-test/blob/main/screenshoots/dashboard.png" width="800"/>
+<img src="https://github.com/fkrmubaroq/vascomm-app-test/blob/main/screenshoots/add-product.png" width="800"/>
+<img src="https://github.com/fkrmubaroq/vascomm-app-test/blob/main/screenshoots/delete-product.png" width="800"/>
+<img src="https://github.com/fkrmubaroq/vascomm-app-test/blob/main/screenshoots/detail-product.png" width="800"/>
+<img src="https://github.com/fkrmubaroq/vascomm-app-test/blob/main/screenshoots/list-product.png" width="800"/>
+<img src="https://github.com/fkrmubaroq/vascomm-app-test/blob/main/screenshoots/list-user.png" width="800"/>
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
